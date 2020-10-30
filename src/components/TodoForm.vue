@@ -1,6 +1,8 @@
 <template>
   <div>
-    Todo form
+    <input type="text" v-model="newToodoItem"/>
+    <button>Submit</button>
+
   </div>
 </template>
 
@@ -8,7 +10,11 @@
 
 
 export default {
-
+data () {
+    return {
+        newToodoItem: '',
+    }
+}
 };
 </script>
 
