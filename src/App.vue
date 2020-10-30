@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <h1>Todos</h1>
     <TodosList/>
+    <TodoForm/>
   </div>
 </template>
 
 <script>
 import TodosList from './components/TodosList'
+import TodoForm from './components/TodoForm'
 
 export default {
   name: 'App',
   components: {
-   TodosList
+   TodosList,
+   TodoForm
   }
 }
 </script>

@@ -1,11 +1,17 @@
 <template>
   <div>
-    Todos List
+    <Todo/>
   </div>
 </template>
 
 <script>
-export default {};
+import Todo from './Todo'
+
+export default {
+    components: {
+        Todo
+    }
+};
 </script>
 
 <style></style>
