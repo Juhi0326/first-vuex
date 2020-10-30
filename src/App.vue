@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <h1>Todos</h1>
+    <h3>Completed: {{$store.getters.completedTodos}}</h3>
+    <h3>Pending: {{$store.getters.pendingTodos}}</h3>
     <TodosList/>
     <TodoForm/>
   </div>
