@@ -1,11 +1,13 @@
 <template>
   <div>
-    Todo
+    {{todo.title}}
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+    props: ['todo']
+};
 </script>
 
 <style></style>

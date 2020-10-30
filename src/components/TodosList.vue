@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Todo v-for="(todo, index) in $store.state.todos" :key="index" />
+    <Todo v-for="(todo, index) in todos" :key="index" :todo='todo' />
   </div>
 </template>
 
@@ -11,6 +11,11 @@ export default {
     components: {
         Todo
     },
+    computed: {
+        todos() {
+            return this.$store.state.todos;
+        }
+    }
 };
 </script>
 
