@@ -5,7 +5,7 @@
       :class="{completed: todo.completed}"
       @click="toggleTodoStatus(todo)"
       >{{ todo.title }} </span>
-      <button @click="deleteTodo(todo)">Delete</button>
+      <button @click="removeTodo(todo)">Delete</button>
     </div>
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
   props: ["todo"],
   methods: {
       ...mapActions({
-          deleteTodo:'deleteTodo',
+          removeTodo:'deleteTodo',
           toggleTodoStatus:'toggleTodoStatus'
       }),
   },
