@@ -5,7 +5,7 @@
       :class="{completed: todo.completed}"
       @click="toggleTodoStatus(todo)"
       >{{ todo.title }} </span>
-      <button @click="deleteTodo()">Delete</button>
+      <button @click="deleteTodo(todo)">Delete</button>
     </div>
   </div>
 </template>
