@@ -18,6 +18,7 @@ data () {
 methods: {
     addNewTodoItem () {
         this.$store.dispatch('addNewTodo',this.newToodoItem);
+        this.newToodoItem='';
     }
 }
 };
