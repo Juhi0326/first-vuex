@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <h1>Todos</h1>
-    <h3>Completed: {{$store.getters.completedTodos}}</h3>
-    <h3>Pending: {{$store.getters.pendingTodos}}</h3>
+    <h3>Completed: {{completedTodos}}</h3>
+    <h3>Pending: {{pendingTodos}}</h3>
     <TodosList/>
     <TodoForm/>
   </div>
@@ -17,7 +17,16 @@ export default {
   components: {
    TodosList,
    TodoForm
+  },
+  computed: {
+    completedTodos () {
+      return this.$store.getters.completedTodos;
+    },
+    pendingTodos () {
+      return this.$store.getters.pendingTodos;
+    }
   }
+
 }
 </script>
 
