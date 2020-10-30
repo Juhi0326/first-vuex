@@ -11,6 +11,7 @@
 <script>
 import TodosList from './components/TodosList'
 import TodoForm from './components/TodoForm'
+import {mapGetters} from 'vuex'
 
 export default {
   name: 'App',
@@ -19,12 +20,10 @@ export default {
    TodoForm
   },
   computed: {
-    completedTodos () {
-      return this.$store.getters.completedTodos;
-    },
-    pendingTodos () {
-      return this.$store.getters.pendingTodos;
-    }
+    ...mapGetters({
+      completedTodos:'completedTodos',
+      pendingTodos:'pendingTodos'
+    }),
   }
 
 }
