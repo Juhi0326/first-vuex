@@ -1,10 +1,12 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import actions from "./actions"
 
 Vue.use(Vuex);
 
 const todoModule = {
   namespaced:true,
+  actions,
   state: {
     todos: [
       {
@@ -44,23 +46,13 @@ const todoModule = {
       todoItem.completed = !todoItem.completed;
     },
   },
-  actions: {
-    addNewTodo({ commit }, todoItem) {
-      commit("NEW_TODO", todoItem);
-    },
-    deleteTodo({ commit }, todoItem) {
-      commit("DELETE_TODO", todoItem);
-    },
-    toggleTodoStatus({ commit }, todoItem) {
-      commit("TOGGLE_TODO_STATUS", todoItem);
-    },
-  },
+
 
 }
 
 export default new Vuex.Store({
 
   modules: {
-    todoModule
+    todoModule,
   },
 });
