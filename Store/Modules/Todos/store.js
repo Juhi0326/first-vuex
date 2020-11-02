@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import actions from "./actions"
+import actions from "./actions";
+import getters from "./getters";
 
 Vue.use(Vuex);
 
@@ -19,18 +20,7 @@ const todoModule = {
       },
     ],
   },
-  getters: {
-    completedTodos(state) {
-      return state.todos.filter((todo) => {
-        return todo.completed === true;
-      }).length;
-    },
-    pendingTodos(state) {
-      return state.todos.filter((todo) => {
-        return todo.completed === false;
-      }).length;
-    },
-  },
+  getters,
   mutations: {
     NEW_TODO(state, todoItem) {
       state.todos.push({
