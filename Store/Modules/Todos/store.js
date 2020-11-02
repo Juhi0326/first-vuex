@@ -3,24 +3,14 @@ import Vuex from "vuex";
 import actions from "./actions";
 import getters from "./getters";
 import mutations from "./mutations";
+import state from "./state"
 
 Vue.use(Vuex);
 
 const todoModule = {
   namespaced:true,
   actions,
-  state: {
-    todos: [
-      {
-        title: "todo item a",
-        completed: false,
-      },
-      {
-        title: "todo item b",
-        completed: false,
-      },
-    ],
-  },
+  state,
   getters,
   mutations
 
