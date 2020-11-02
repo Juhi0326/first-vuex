@@ -14,7 +14,6 @@ const todoModule = {
   getters,
   mutations
 
-
 }
 
 export default new Vuex.Store({
