@@ -14,7 +14,7 @@ export default {
     },
     computed: {
         ...mapState({
-            todos:'todos'
+            todos: state=> state.todoModule.todos
         })
     }
 };

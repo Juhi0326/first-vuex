@@ -3,7 +3,8 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+const todoModule = {
+  namespaced:true,
   state: {
     todos: [
       {
@@ -53,5 +54,13 @@ export default new Vuex.Store({
     toggleTodoStatus({ commit }, todoItem) {
       commit("TOGGLE_TODO_STATUS", todoItem);
     },
+  },
+
+}
+
+export default new Vuex.Store({
+
+  modules: {
+    todoModule
   },
 });

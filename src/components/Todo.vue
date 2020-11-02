@@ -16,8 +16,8 @@ export default {
   props: ["todo"],
   methods: {
       ...mapActions({
-          removeTodo:'deleteTodo',
-          toggleTodoStatus:'toggleTodoStatus'
+          removeTodo:'todoModule/deleteTodo',
+          toggleTodoStatus:'todoModule/toggleTodoStatus'
       }),
   },
 };

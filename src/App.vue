@@ -21,8 +21,8 @@ export default {
   },
   computed: {
     ...mapGetters({
-      completedTodos:'completedTodos',
-      pendingTodos:'pendingTodos'
+      completedTodos:'todoModule/completedTodos',
+      pendingTodos:'todoModule/pendingTodos'
     }),
   }
 
